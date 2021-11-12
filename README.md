@@ -53,16 +53,14 @@ Consequently the distribution of newspapers that relates at least one of those *
 
 Additionally, by looking at only one quote (the most relayed one for example as it is done in the notebook), the distribution of the newspapers that relayed it can be highlighted. In fact, it is interesting to see that it follows a power law, with many journals that relay the same quote many times, while other relay it only once.
 
-The quotations associated to a topic by searching for the topic keywords can be obtained. This is the first step towards the graph construction since it is possible to get all quotations that relates to a subject. A second step would be to get the sentiment score of the quotations. 
-
-Graph some speaker-newspaper to show that we know how to use NetworkX
+The quotations associated to a topic by searching for the topic keywords can be obtained. This is the first step towards the graph construction since it is possible to get all quotations that relates to a subject. A second step would be to get the sentiment score of the quotations. Currently a graph to relate speaker-newspaper has been drawn to visualize how the following steps would be carried out.
 
 
 ## Methods to implement
 -	Filter dataset to get the news website of interest for the study.
 -   NLP for sentiment analysis 
 -   Building tonality graphs as described before by using the NetworkX library. 
--	Quantifying controversy by assigning a value to the graph clustering, by measuring how separated in terms of sentiment score the quotations 
+-	Quantifying controversy by assigning a value to the graph clustering 
 
 ## Proposed timeline
 - **12 Nov 2021**:
@@ -75,8 +73,7 @@ Graph some speaker-newspaper to show that we know how to use NetworkX
 
 - **26 Nov 2021**:
     > Updating/Correcting the methods 
-    > Adding **quantify_controvresy** and **quantify_objectivity**
-    > Building the graphs that are going to be plotted
+    > Building the graphs 
 
 
 - **3 - 17  Dec 2021**:
