@@ -21,13 +21,13 @@ To answer this main question a controversy measure of each major news website wi
                 -	Edge : link between quotations with similar tones (close sentiment score).
             
     > The main hypothesis is that the constructed graph will either have one or two clusters, with the second case occuring when the topic is highly controversial since the quotations aggregate into two sets with opposing sentiments. By quantifying the clustering of the graph, a controversy measure could be assigned to the topic. 
-    
-- ***How to quantify controversiality for a whole newspaper?***
-    > By summing over all relevant topics talked in the medium , a controversy score could be defined for the newspaper, it can be noted that some topic might hold more weight in terms of controversy, therefore an idea would be to use the ratio of occurence of the topic keyword as a weight for each topic.
-    
-    A simplified drawing of the proposed model is given below (see dessin_1.png):
+
+A simplified drawing of the proposed model is given below (see dessin_1.png):
    
-<img src="/dessin_1.png" width=80% height=60%>
+<img src="/dessin_1.png" width=80% height=60%>  
+  
+- ***How to quantify controversiality for a whole newspaper?***
+    > By summing over all relevant topics talked in the medium , a controversy score could be defined for the newspaper, it can be noted that some topic might hold more weight in terms of controversy, therefore an idea would be to use the ratio of occurence of the topic keyword as a weight for each topic. 
 
 - ***How biased is a newspaper relative to other news outlets ?***
     > By using the tonality graph desribed above, an analysis of a newspaper subjectivity can also be carried out. In fact, for a given topic, a pattern in the graph can rise among different newspapers. The majority rule is then being followed for identifying subjective newspapers which in this case would represented as outliers since they won't follow the described trend.
