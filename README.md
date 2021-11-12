@@ -1,6 +1,4 @@
-# ADA_ViveLesGC
-
-# How controversial and objective are today's news websites?
+# ViveLesGC: How controversial and objective are today's news websites?
 
 ## Abstract
 The goal of this project is to assess how a news website popularity relate to its controversiality and objectivity, by analysing the quotations within its articles. 
@@ -29,7 +27,7 @@ To answer this main question a controversy measure of each major news website wi
     
     A simplified drawing of the proposed model is given below (see dessin_1.png):
    
-<img src="/dessin_1.png" width=80% height=50%>
+<img src="/dessin_1.png" width=80% height=60%>
 
 - ***How biased is a newspaper relative to other news outlets ?***
     > By using the tonality graph desribed above, an analysis of a newspaper subjectivity can also be carried out. In fact, for a given topic, a pattern in the graph can rise among different newspapers. The majority rule is then being followed for identifying subjective newspapers which in this case would represented as outliers since they won't follow the described trend.
@@ -57,10 +55,10 @@ The quotations associated to a topic by searching for the topic keywords can be 
 
 
 ## Methods to implement
--	Filter dataset to get the news website of interest for the study.
+-   Filter dataset to get the news website of interest for the study.
 -   NLP for sentiment analysis 
 -   Building tonality graphs as described before by using the NetworkX library. 
--	Quantifying controversy by assigning a value to the graph clustering 
+-   Quantifying controversy by assigning a value to the graph clustering 
 
 ## Proposed timeline
 - **12 Nov 2021**:
