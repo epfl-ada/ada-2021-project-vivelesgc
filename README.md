@@ -81,8 +81,10 @@ The quotations associated to a topic by searching for the topic keywords can be 
 
 ## Organization within the team:
 
-- Arthur is in charge of the graphs visualisation
-- Paul is in charge of the sentiment analysis
-- Fadel is in charge of building the theory which will be implemented
-- Yannick is in charge of building the interactive website
+**Everyone will work on building the theory, the code, the website, but each person is in charge of a department, and anyone has to come to him if any question arises while working for his department.**
+
+- Arthur is in charge of the graphs visualisation's department
+- Paul is in charge of the sentiment analysis' department
+- Fadel is in charge of theory's department
+- Yannick is in charge of the interactive website's department.
 
