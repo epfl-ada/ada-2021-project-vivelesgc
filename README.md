@@ -29,7 +29,7 @@ To answer this main question a controversy measure of each major news website wi
     
     A simplified drawing of the proposed model is given below (see dessin_1.png):
    
-<img src="/dessin_1.png" width=50% height=50%>
+<img src="/dessin_1.png" width=80% height=50%>
 
 - ***How biased is a newspaper relative to other news outlets ?***
     > By using the tonality graph desribed above, an analysis of a newspaper subjectivity can also be carried out. In fact, for a given topic, a pattern in the graph can rise among different newspapers. The majority rule is then being followed for identifying subjective newspapers which in this case would represented as outliers since they won't follow the described trend.
@@ -83,8 +83,8 @@ The quotations associated to a topic by searching for the topic keywords can be 
 
 **Everyone will work on building the theory, the code, the website, but each person is in charge of a department, and anyone has to come to him if any question arises while working for his department.**
 
-- Arthur is in charge of the graphs visualisation's department
-- Paul is in charge of the sentiment analysis' department
-- Fadel is in charge of theory's department
-- Yannick is in charge of the interactive website's department.
+- Arthur: graphs visualisation
+- Paul: sentiment analysis
+- Fadel: theory implementation 
+- Yannick: data story design 
 
