@@ -18,8 +18,7 @@ To answer this main question a controversy measure of each major news website wi
 
 
 ## Data story
-Click the following link to access our amazing data story.
-
+Click the following [link](https://vivelesgc.github.io/how-controversial-are-todays-newspapers/) to access our amazing data story.
 
 ## Research Questions
 
