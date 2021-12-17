@@ -1,5 +1,10 @@
 # ViveLesGC: How controversial and objective are today's news websites?
 
+
+## Title
+Interaction between controversy in newspapers and sales
+
+
 ## Abstract
 The goal of this project is to assess how a news website popularity relate to its controversiality and objectivity, by analysing the quotations within its articles. 
 
@@ -11,21 +16,21 @@ Since it can be expected that users seek entertainment while searching for infor
 
 To answer this main question a controversy measure of each major news website will be done by analysing the controversy of the quotations within the medium. 
 
+
+## Data story
+Click the following link to access our amazing data story.
+
+
 ## Research Questions
 
+- ***Detection of topics in a newspaper***
+    > Using LDA (Latent dirichlet allocation) and coherence scores we are able to detect salient topics from our datasets. We set for 11 topics (each described by 11 distinctive words) as we obtained the highest coherence score for this number of topics. These topics will be analyzed to quantify the controversiality of the newspapers we will investigate. WE recall that topics are list of strings
+    
 - ***How to quantify controversiality of a topic in a newspaper?***
-    >   In order to grasp how to quantify controversy you can look at [this paper](https://arxiv.org/abs/1512.05550) which details a method of assigning a controversy measure to hashtags on twitter by building retweet and follow graphs.	
+    >   In order to grasp how to quantify controversy you can look at [this paper](https://arxiv.org/abs/1512.05550) which details a method of assigning a controversy measure to hashtags on twitter by building retweet and follow graphs. In the same paper it was showcased that sentiment distribution in tweets could allow to differentiate controversial topics from non controversial topics. 
+    We have used their findings as basis to motivate our controversy scores computation. Our controversy score is defined as : **2 * min(#positive_quotes, #negative_quotes)/#total_quotes** where "#" stands for "number of". This method is both simple and fast as no pairwise comparison is needed. It provides an "absolute measure of controversy".
+    To validate our intuition behing this polarity-based score, we have compared our method to the variance-based method explained in the paper above.
 
-    > In the case of this project, a given newspaper would be assimilated to a social medium. Within the news outlet multiple topics are discussed and the goal would be to assess how controversial each topic is.  For a given subject, quotations relating to the subject key word can be found and by analysing its tone through NLP techniques for sentiment analysis (see 8.2 in the [paper](https://arxiv.org/abs/1512.05550)) a positive/negative sentiment score can be assigned to each quotations. Afterward, a graph with the following properties can be built:<br>
-                -	Vertex : quotation that relates to the topic. <br>
-                -	Edge : link between quotations with similar tones (close sentiment score).
-            
-    > The main hypothesis is that the constructed graph will either have one or two clusters, with the second case occuring when the topic is highly controversial since the quotations aggregate into two sets with opposing sentiments. By quantifying the clustering of the graph, a controversy measure could be assigned to the topic. 
-
-A simplified drawing of the proposed model is given below (see dessin_1.png):
-   
-<img src="/dessin_1.png" width=80% height=60%>  
-  
 - ***How to quantify controversiality for a whole newspaper?***
     > By summing over all relevant topics talked in the medium , a controversy score could be defined for the newspaper, it can be noted that some topic might hold more weight in terms of controversy, therefore an idea would be to use the ratio of occurence of the topic keyword as a weight for each topic. 
 
@@ -35,11 +40,12 @@ A simplified drawing of the proposed model is given below (see dessin_1.png):
 - ***How controversial the most mentionned topics are?***  
     > By using the same data as for the previous question, it can be also analyse if the majority of news websites depicts a given topic as being controversial. Furthermore, the evolution of how a topic is depicted in the media could even be highlighted. For example, a study case on ***climate change*** can be made to show how major news outlets have described the issue over the years.
 
+- ***Understanding controversy in newspapers and its correlation to sellings***
+    > An interesting endeavour would be to investigate if any relationship exist between newspapers sellings and their controversiality. It is quite tricky to make as we do not know other covariates that could better explained this relationship. We will relate the two quantities and try to make sense of our observations.
+
 ## Proposed additional datasets
 
-- Data concerning the popularity of the news website over the years, such as the number of daily users, suscribers, viewers etc... 
-
-- Depending on the advances on the project, the datasets could be extended to years prior to 2015 in order to assess the websites growth over a greater time span. 
+- Data concerning the popularity of the news website over the years,in particular **sellings**. We have considered 14 newspapers in the UK from 2015 to 2020.
 
 ## Get, manage, process, and enrich the datasets
 
@@ -54,11 +60,32 @@ Additionally, by looking at only one quote (the most relayed one for example as 
 The quotations associated to a topic by searching for the topic keywords can be obtained. This is the first step towards the graph construction since it is possible to get all quotations that relates to a subject. A second step would be to get the sentiment score of the quotations. Currently a graph to relate speaker-newspaper has been drawn to visualize how the following steps would be carried out.
 
 
-## Methods to implement
+## Methods implemented
 -   Filter dataset to get the news website of interest for the study.
--   NLP for sentiment analysis 
--   Building tonality graphs as described before by using the NetworkX library. 
--   Quantifying controversy by assigning a value to the graph clustering 
+
+-   Detect meaningful topic from newspapers
+    We have used LDA (Latent dirichlet allocation) to detect topics
+    
+-   Quantify controversy using polarity scores (with NLP libraries)
+    We designed our own method for computing 'absolute' controversy score.
+    
+-   Compare our method to existing methods from literature
+    We validated our modeled against existing models by building search trees and running "top-k closest queries"
+
+-   Compute global controversy score of newspapers 
+
+## Main python libraries 
+Pandas
+Numpy
+networkx
+seaborn
+matplotlib
+ntlk
+plotly
+Scipy
+VaderSentiment
+sklearn
+
 
 ## Proposed timeline
 - **12 Nov 2021**:
@@ -71,7 +98,6 @@ The quotations associated to a topic by searching for the topic keywords can be 
 
 - **26 Nov 2021**:
     > Updating/Correcting the methods 
-    > Building the graphs 
 
 
 - **3 - 17  Dec 2021**:
